@@ -1,8 +1,8 @@
 
 
-<% @ideas.each do |idea| %>
+<% @ideas.in_groups_of(6) do |group| %>
   <div class="row_doppler">
-    <%# group.compact.each do |idea| %>
+    <% group.compact.each do |idea| %>
       <div class="col_doppler">
       <%= link_to idea ,class: "gogogo" do%>
       	<span><%= idea.name %></span>
@@ -11,6 +11,6 @@
         <%= image_tag idea.picture_url, width: '105%' if idea.picture.present?%>
         <% end %>
       </div>
-    <%# end %>
+    <% end %>
   </div>
 <% end %>
