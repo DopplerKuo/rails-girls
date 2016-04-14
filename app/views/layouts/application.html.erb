@@ -9,7 +9,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<nav class="navbar navbar-default" role="navigation">
+	<nav class="navbar navbar-default navbar_doppler" role="navigation">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -18,16 +18,44 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="/">The Idea app</a>
+	      <a class="navbar-brand" href="/">
+	      	<%= image_tag('DopplerUI.svg') %>
+	      </a>
 	    </div>
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	        <li class="active"><a href="#">Link</a></li>
+	        <!-- <li class="active"><a href="#">Link</a></li> -->
+	        <li class="nav_new_ideas nav_new_doppler"><%= link_to '', new_idea_path, class: "test_doppler" %></li>
 	      </ul>
+	      <p class="navbar-text pull-right">
+			<% if user_signed_in? %>
+			  歡迎， <strong><%= current_user.email %></strong>.
+			  <%= link_to edit_user_registration_path, :class => 'navbar-link' do %>
+			  <span class="user-gravatar"><%= image_tag current_user.gravatar_url %></span>
+			  <% end %> |
+			  <%= link_to "Sign up", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+			<% else %>
+			  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+			  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+			<% end %>
+		  </p>
 	    </div>
 	  </div>
 	</nav>
+	<div class="form_all">
+		<h1 class="form_title" >New Idea</h1>
+		<div class="form_doppler">
+			<%= render '/layouts/form' %>
+			<label type="file" for="idea_picture" id="real_file">上傳檔案</label>
+		</div>
+	</div>
 	<div class="container">
+		<% if notice %>
+		  <p class="alert alert-success"><%= notice %></p>
+		<% end %>
+		<% if alert %>
+		  <p class="alert alert-danger"><%= alert %></p>
+		<% end %>
 	  <%= yield %>
 	</div>
 	<footer>

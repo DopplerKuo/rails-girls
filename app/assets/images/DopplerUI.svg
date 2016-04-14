@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="115px" height="23px" viewBox="0 0 115 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>DopplerUI</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="24" font-family="ArialRoundedMTBold, Arial Rounded MT Bold" letter-spacing="-0.15000011" font-weight="normal">
+        <g id="UIKIT" transform="translate(-370.000000, -543.000000)">
+            <text id="DopplerUI">
+                <tspan x="369" y="561" fill="#FFFFFF">Doppler</tspan>
+                <tspan x="461.489062" y="561" fill="#FAC76D">UI</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

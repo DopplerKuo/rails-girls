@@ -1,5 +1,5 @@
-<%= form_for(@idea) do |f| %>
-  <% if @idea.errors.any? %>
+<%= form_for Idea.new, url: new_idea_path, method: :get do |f| %>
+  <% if Idea.new.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@idea.errors.count, "error") %> prohibited this idea from being saved:</h2>
 

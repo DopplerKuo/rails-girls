@@ -1,0 +1,255 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+body { 
+    padding-top: 60px;
+    background-image: -webkit-linear-gradient(bottom, #fff 0, #f1f1f1 100%);
+     }
+footer { margin-top: 100px; }
+td { text-align: center; padding-left: 10px; }
+th { border-bottom: 1px solid #DDD; padding-left: 20px; }
+
+
+
+.navbar {
+    min-height: 38px;
+}
+
+.navbar_doppler {
+    left: 50%;
+    width: 90%;
+    max-width: 960px;
+    transform: translate3d(-50%,0,0);
+    background-image: -webkit-linear-gradient(right, #A3E1F0 0, #6ABFDD 100%);
+    background-color: none;
+    border-radius: 25px;
+    box-shadow:  0 10px 40px -5px rgba(9,162,240,.5),
+                 0 2px 3px 0px rgba(9,162,240,.3);
+    border: 0px;
+    margin-bottom: 60px;
+}
+
+.nav_new_doppler {
+    background: #fff;
+    border-radius: 30px;
+    height: 30px;
+    width: 50px;
+    margin: 10px;
+    box-shadow: 0px 9px 7px -4px rgba(45,128,157,.5);
+    transition: .5s;
+}
+
+.nav_new_doppler:hover {
+    background: #fff;
+    border-radius: 30px;
+    height: 30px;
+    width: 50px;
+    margin: 10px;
+    box-shadow: 0px 1px 1px 0px rgba(45,128,157,.9);
+}
+
+.test_doppler {
+    position: relative;
+}
+
+.test_doppler:before {
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: 15px;
+    width: 20px;
+    height: 4px;
+    border-radius: 2px; 
+    background-color: #6ABFDD;
+    z-index: 3;
+    transition: .3s;
+}
+
+.test_doppler:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 23px;
+    width: 4px;
+    height: 20px;
+    border-radius: 2px; 
+    background-color: #6ABFDD;
+    z-index: 3;
+    transition: .3s;
+}
+
+.test_doppler:hover:after ,.test_doppler:hover:before{
+    transform: rotate3d(0,0,1,180deg) scale3d(.89,.89,1);
+}
+
+
+.navbar_doppler .navbar-text,
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-link  {
+    color: #4C8FBF;
+}
+
+.navbar>.container-fluid .navbar-brand {
+    margin: 0;
+}
+
+.navbar-default .navbar-brand {
+
+}
+
+.navbar a.brand { font-size: 18px; }
+.navbar a.brand:hover {
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.user-gravatar {
+    display: inline-block;
+    width: 32px;
+    position: relative;
+    margin: 0;
+}
+
+.user-gravatar img {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    top: -22px;
+}
+
+// ----------------------form--------------------
+
+.form_all {
+    transform: translate(0,-10%);
+    animation: form_gogo .7s cubic-bezier(1,-0.07,.47,1.22) 1;
+    #idea_name {
+        border: 0px;
+        height: 30px;
+        border-radius: 20px;
+        cursor: pointer;
+        text-align: center;
+        padding: 20px 10px;
+        box-shadow: 0px -2px 0 0 rgba(0,0,0,.1),0px 2px 0 0 rgba(255,255,255,3);
+        outline: none;
+    }
+    #idea_description {
+        outline: none;
+        text-align: center;
+        cursor: pointer;
+        border: 0px;
+        border-radius: 2px;
+        height: 70px;
+        padding: 10px 10px;
+        box-shadow: 0px -2px 0 0 rgba(0,0,0,.1),0px 2px 0 0 rgba(255,255,255,3);
+    }
+    #idea_picture {
+        opacity: 0;
+        padding: 20px 0 ;
+    }
+    #real_file {
+        position: relative;
+        width: 40%;
+        height: 35px;
+        cursor: pointer;
+        left: 30%;
+        border-radius: 20px;
+        background-color: #455762;
+        color: #fff;
+        line-height: 35px;
+        font-size: 15px;
+        opacity: .5;
+        transition:.3s;
+        transform: translate3d(-120px,-60px,0);
+    }
+    #real_file:hover {
+        opacity: 1;
+    }
+    .actions {
+        input {
+            position: absolute;
+            bottom: 50px;
+            width: 50%;
+            height: 60px;
+            left: 25%;
+            border: 0 none;
+            border-radius: 30px;
+            color: #fff;
+            background-image: -webkit-linear-gradient(left, #FDE5A6 0, #FAC76D 100%);
+            box-shadow: 0 15px 30px -9px rgba(251,193,93,.8);
+            transition:.3s;
+            animation: form_actions_gogo .7s .1s cubic-bezier(1,-0.07,.47,1.22) 1;
+            &:hover {
+                box-shadow: 0 3px 3px 0px rgba(251,193,93,1);
+                transform: scale3d(.95,.95,1);
+            }
+
+        }
+    }
+
+}
+
+
+.form_title {
+    font-family: Comic Sans MS;
+    position: relative;
+    top: 0px;
+    color: #fff;
+    text-shadow: 0px 15px 20px rgba(8,155,200,.4),0px 3px 10px rgba(8,155,200,.6);
+    z-index: 99;
+    font-size: 60px;
+    transform: translate(0,50%);
+    animation: form_title_gogo .7s .1s cubic-bezier(1,-0.07,.47,1.22) 1;
+
+}
+
+.form_doppler {
+    position: relative;
+    left: 50%;
+    width: 600px;
+    max-width: 600px;
+    transform: translate3d(-50%,0,0);
+    text-align: center;
+    background-image: -webkit-linear-gradient(top, #A3E1F0 0, #6ABFDD 100%);
+    padding: 100px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 0px 28px 30px -20px rgba(8,155,200,.5);
+    color:#4C8FBF;
+}
+
+#idea_picture {
+    margin: 0 auto;
+    width: 35%;
+}
+
+
+@keyframes form_gogo{
+      0%{ opacity: 0; transform: translate(0,20%);}
+      100%{ opacity: 1; transform: translate(0,-10%);}
+}
+
+@keyframes form_title_gogo{
+      0%{ transform: translate(0,100%) }
+    100%{ transform: translate(0,50%)}
+}
+
+@keyframes form_actions_gogo{
+      0%{ transform: translate(0,100%) }
+    100%{ transform: translate(0,0%) }
+}
+
